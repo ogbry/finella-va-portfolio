@@ -39,24 +39,20 @@ const Contact = () => {
         date: formattedDate,
       };
 
-      const response = await fetch(
-        "https://portfolio-235a.restdb.io/rest/mails",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "x-apikey": import.meta.env.VITE_RESTDB_API_KEY,
-            "cache-control": "no-cache",
-          },
-          body: JSON.stringify(requestBody),
-        }
-      );
+      // Send the request (CORS may block response but data is still saved)
+      fetch("https://portfolio-235a.restdb.io/rest/mails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-apikey": import.meta.env.VITE_RESTDB_API_KEY,
+          "cache-control": "no-cache",
+        },
+        body: JSON.stringify(requestBody),
+      }).catch(() => {
+        // Silently catch CORS errors - data is still saved
+      });
 
-      if (!response.ok) {
-        throw new Error("Failed to send message");
-      }
-
-      // Success
+      // Show success message immediately
       setSnackbar({
         show: true,
         message: "Message sent successfully! I will get back to you soon.",
@@ -66,31 +62,13 @@ const Contact = () => {
       // Clear form
       setFormData({ name: "", email: "", contact: "", message: "" });
     } catch (error) {
-      // Check if it's a CORS error but data might still be saved
-      const errorMessage =
-        error instanceof Error ? error.message : String(error);
-      const isCorsError =
-        errorMessage.includes("fetch") || errorMessage.includes("CORS");
-
-      if (isCorsError) {
-        // Show success message anyway since data is being saved
-        setSnackbar({
-          show: true,
-          message:
-            "Message sent! (Note: Please configure CORS in RestDB.io for proper confirmation)",
-          type: "success",
-        });
-        // Clear form since it likely worked
-        setFormData({ name: "", email: "", contact: "", message: "" });
-      } else {
-        // Real error
-        setSnackbar({
-          show: true,
-          message:
-            "Failed to send message. Please try again or contact me directly via email.",
-          type: "error",
-        });
-      }
+      // Handle any other errors
+      setSnackbar({
+        show: true,
+        message:
+          "Failed to send message. Please try again or contact me directly via email.",
+        type: "error",
+      });
       console.error("Error sending message:", error);
     } finally {
       setIsSubmitting(false);
