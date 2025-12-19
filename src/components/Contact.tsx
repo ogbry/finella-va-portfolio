@@ -39,20 +39,24 @@ const Contact = () => {
         date: formattedDate,
       };
 
-      // Send the request (CORS may block response but data is still saved)
-      fetch("https://portfolio-235a.restdb.io/rest/mails", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-apikey": import.meta.env.VITE_RESTDB_API_KEY,
-          "cache-control": "no-cache",
-        },
-        body: JSON.stringify(requestBody),
-      }).catch(() => {
-        // Silently catch CORS errors - data is still saved
-      });
+      const response = await fetch(
+        "https://portfolio-235a.restdb.io/rest/mails",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-apikey": import.meta.env.VITE_RESTDB_API_KEY,
+            "cache-control": "no-cache",
+          },
+          body: JSON.stringify(requestBody),
+        }
+      );
 
-      // Show success message immediately
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      // Success
       setSnackbar({
         show: true,
         message: "Message sent successfully! I will get back to you soon.",
@@ -62,7 +66,6 @@ const Contact = () => {
       // Clear form
       setFormData({ name: "", email: "", contact: "", message: "" });
     } catch (error) {
-      // Handle any other errors
       setSnackbar({
         show: true,
         message:
