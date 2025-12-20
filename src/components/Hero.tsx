@@ -28,12 +28,13 @@ const Hero = () => {
         </p>
 
         <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-8 sm:mb-12 text-primary-50 leading-relaxed">
-          I'm an aspiring Virtual Assistant with a strong background in credit and collections,
-          financial analysis, and remote team collaboration. I bring organization, attention to detail,
-          and a genuine commitment to making your workload lighter and your goals achievable.
+          I'm an aspiring Virtual Assistant with a strong background in credit
+          and collections, financial analysis, and remote team collaboration. I
+          bring organization, attention to detail, and a genuine commitment to
+          making your workload lighter and your goals achievable.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-4">
           <a
             href="#contact"
             className="inline-block bg-white text-primary-700 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-primary-50 transition-colors shadow-lg hover:shadow-xl"
@@ -51,7 +52,12 @@ const Hero = () => {
             download="Marie_Alfuente_Resume.pdf"
             className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-primary-700 transition-colors"
           >
-            <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="w-4 h-4 sm:w-5 sm:h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -64,8 +70,11 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#about" className="text-white opacity-75 hover:opacity-100 transition-opacity">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
+        <a
+          href="#about"
+          className="text-white opacity-75 hover:opacity-100 transition-opacity"
+        >
           <svg
             className="w-8 h-8"
             fill="none"
@@ -82,7 +91,7 @@ const Hero = () => {
         </a>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
