@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 text-white pt-20 md:pt-0"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 text-white pt-24"
     >
       <div className="absolute inset-0 bg-black opacity-10"></div>
 
@@ -34,7 +34,7 @@ const Hero = () => {
           making your workload lighter and your goals achievable.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-4">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-16 sm:mb-20">
           <a
             href="#contact"
             className="inline-block bg-white text-primary-700 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-primary-50 transition-colors shadow-lg hover:shadow-xl"
