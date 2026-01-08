@@ -1,3 +1,5 @@
+import resumePDF from "../assets/Alfuente,Marie Finella Resume.pdf";
+
 const Hero = () => {
   return (
     <section
@@ -48,7 +50,7 @@ const Hero = () => {
             View Services
           </a>
           <a
-            href="/resume.pdf"
+            href={resumePDF}
             download="Marie_Alfuente_Resume.pdf"
             className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-primary-700 transition-colors"
           >
