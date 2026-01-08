@@ -12,7 +12,7 @@ const Hero = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-white rounded-full blur-xl opacity-30 animate-pulse"></div>
             <img
-              src="https://media.licdn.com/dms/image/v2/D4E03AQFlnJPFAXYDog/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1678947729717?e=1767830400&v=beta&t=Fv0eJzEK66cYtoUUou9GngcunhMRVBJub5b2eAb9MQU"
+              src="https://media.licdn.com/dms/image/v2/D4E03AQFlnJPFAXYDog/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1678947729717?e=1769644800&v=beta&t=kG-xnKFqR_b8yY3R9F5iVjj0sPuQ2yOZR3uszXy6joM"
               alt="Marie Finella D. Alfuente"
               className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white shadow-2xl"
             />
@@ -28,7 +28,7 @@ const Hero = () => {
         </p>
 
         <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-8 sm:mb-12 text-primary-50 leading-relaxed">
-          I'm an aspiring Virtual Assistant with a strong background in credit
+          I'm open to new roles and bring a strong background in credit
           and collections, financial analysis, and remote team collaboration. I
           bring organization, attention to detail, and a genuine commitment to
           making your workload lighter and your goals achievable.

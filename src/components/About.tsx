@@ -1,20 +1,35 @@
-import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const About = () => {
-  const { elementRef, isVisible } = useScrollAnimation()
+  const { elementRef, isVisible } = useScrollAnimation();
 
   return (
-    <section id="about" className="section-container bg-white" ref={elementRef as React.RefObject<HTMLElement>}>
+    <section
+      id="about"
+      className="section-container bg-white"
+      ref={elementRef as React.RefObject<HTMLElement>}
+    >
       <div className="max-w-5xl mx-auto">
-        <h2 className={`section-title text-center animate-slide-up ${isVisible ? 'visible' : ''}`}>About Me</h2>
+        <h2
+          className={`section-title text-center animate-slide-up ${
+            isVisible ? "visible" : ""
+          }`}
+        >
+          About Me
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center mb-12">
           {/* Profile Image */}
-          <div className={`flex justify-center md:justify-end animate-slide-left ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
+          <div
+            className={`flex justify-center md:justify-end animate-slide-left ${
+              isVisible ? "visible" : ""
+            }`}
+            style={{ transitionDelay: "0.1s" }}
+          >
             <div className="relative">
               <div className="absolute inset-0 bg-primary-500 rounded-2xl blur-2xl opacity-20"></div>
               <img
-                src="https://media.licdn.com/dms/image/v2/D4E03AQFlnJPFAXYDog/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1678947729717?e=1767830400&v=beta&t=Fv0eJzEK66cYtoUUou9GngcunhMRVBJub5b2eAb9MQU"
+                src="https://media.licdn.com/dms/image/v2/D4E03AQFlnJPFAXYDog/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1678947729717?e=1769644800&v=beta&t=kG-xnKFqR_b8yY3R9F5iVjj0sPuQ2yOZR3uszXy6joM"
                 alt="Marie Finella D. Alfuente"
                 className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-2xl object-cover shadow-xl border-4 border-white"
               />
@@ -22,7 +37,12 @@ const About = () => {
           </div>
 
           {/* About Text */}
-          <div className={`md:col-span-2 space-y-6 text-lg text-gray-700 leading-relaxed animate-slide-right ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
+          <div
+            className={`md:col-span-2 space-y-6 text-lg text-gray-700 leading-relaxed animate-slide-right ${
+              isVisible ? "visible" : ""
+            }`}
+            style={{ transitionDelay: "0.2s" }}
+          >
             <p>
               I'm Fin, and I help clients stay organized, focused, and on track.
             </p>
@@ -50,7 +70,12 @@ const About = () => {
         </div>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className={`text-center animate-scale ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.4s' }}>
+          <div
+            className={`text-center animate-scale ${
+              isVisible ? "visible" : ""
+            }`}
+            style={{ transitionDelay: "0.4s" }}
+          >
             <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg
                 className="w-8 h-8 text-primary-600"
@@ -72,7 +97,12 @@ const About = () => {
             </p>
           </div>
 
-          <div className={`text-center animate-scale ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.5s' }}>
+          <div
+            className={`text-center animate-scale ${
+              isVisible ? "visible" : ""
+            }`}
+            style={{ transitionDelay: "0.5s" }}
+          >
             <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg
                 className="w-8 h-8 text-primary-600"
@@ -92,7 +122,12 @@ const About = () => {
             <p className="text-gray-600">Structured approach to every task</p>
           </div>
 
-          <div className={`text-center animate-scale ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.6s' }}>
+          <div
+            className={`text-center animate-scale ${
+              isVisible ? "visible" : ""
+            }`}
+            style={{ transitionDelay: "0.6s" }}
+          >
             <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg
                 className="w-8 h-8 text-primary-600"
