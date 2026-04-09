@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import profilePhoto from "../assets/fin.jpg";
 
 const About = () => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -29,7 +30,7 @@ const About = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-primary-500 rounded-2xl blur-2xl opacity-20"></div>
               <img
-                src="https://media.licdn.com/dms/image/v2/D4E03AQFlnJPFAXYDog/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1678947729717?e=1769644800&v=beta&t=kG-xnKFqR_b8yY3R9F5iVjj0sPuQ2yOZR3uszXy6joM"
+                src={profilePhoto}
                 alt="Marie Finella D. Alfuente"
                 className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-2xl object-cover shadow-xl border-4 border-white"
               />

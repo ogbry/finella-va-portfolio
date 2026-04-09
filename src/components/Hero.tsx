@@ -1,4 +1,5 @@
 import resumePDF from "../assets/Alfuente,Marie Finella Resume.pdf";
+import profilePhoto from "../assets/fin.jpg";
 
 const Hero = () => {
   return (
@@ -14,7 +15,7 @@ const Hero = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-white rounded-full blur-xl opacity-30 animate-pulse"></div>
             <img
-              src="https://media.licdn.com/dms/image/v2/D4E03AQFlnJPFAXYDog/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1678947729717?e=1769644800&v=beta&t=kG-xnKFqR_b8yY3R9F5iVjj0sPuQ2yOZR3uszXy6joM"
+              src={profilePhoto}
               alt="Marie Finella D. Alfuente"
               className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white shadow-2xl"
             />
